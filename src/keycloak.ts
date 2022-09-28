@@ -47,6 +47,7 @@ export async function updateToken(): Promise<string> {
     await $keycloak.updateToken(100)
     setToken($keycloak.token as string)
   } catch (error) {
+    console.log(error)
     hasFailed(true)
     throw new Error('Failed to refresh the token, or the session has expired')
   }
