@@ -44,7 +44,7 @@ export async function updateToken(): Promise<string> {
   }
 
   try {
-    await $keycloak.updateToken(10)
+    await $keycloak.updateToken(100)
     setToken($keycloak.token as string)
   } catch (error) {
     hasFailed(true)
